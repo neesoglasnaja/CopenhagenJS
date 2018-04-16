@@ -77,6 +77,10 @@
 .slide.menu-slide .transparent {
   opacity: 0.25;
 }
+.slide.white p,
+.slide.white ul {
+  color: #fff;
+}
 .slide.label-header h2 {
   display: inline-block;
   padding: 10px 30px;
@@ -90,6 +94,9 @@
   padding-bottom: 20px;
   font-size: 120px;
 }
+.slide h2.strike {
+  text-decoration: line-through;
+}
 .label {
   background-color: #b5a061;
   color: #fff;
@@ -102,6 +109,13 @@
   border: 1px solid #efefef;
   padding-top: 10px;
   width: 700px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.screen-example.__shadow {
+  box-shadow: 0 -100px 0 0 #fff;
+  background-color: #fff;
 }
 .relative {
   position: relative;

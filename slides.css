@@ -11,7 +11,7 @@ iframe {
   opacity: 0;
 }
 #cover h2 {
-  margin: 160px 0 0;
+  margin: 100px 0 0;
   color: #fff;
   text-align: center;
   font-size: 86px;
@@ -59,4 +59,13 @@ iframe {
 }
 .bigger {
   font-size: 53px;
+}
+.logo {
+  width: 150px;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 90px;
+}
+.logo + .logo {
+  margin-left: 50px;
 }

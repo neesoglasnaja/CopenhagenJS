@@ -3,10 +3,10 @@ include ./blocks/cover.jade
 include ./blocks/quote.jade
 include ./blocks/frame.jade
 
-- var title = "Эти страшные буквы MV*"
+- var title = "I'm not afraid of MV* in&nbsp;JavaScript"
 
 doctype html
-html(lang='ru')
+html(lang='en')
   head
     title !{title}
     meta(charset='utf-8')
@@ -20,10 +20,19 @@ html(lang='ru')
     header.caption
       h1 !{title}
     +slide({name: 'cover', header: title, classes:'cover'})
-      p Александра Шинкевич (
+      p Sasha Shinkevich (
         a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
         | )
       +cover('pictures/cover.jpg')
+    +slide({header: "About me", classes: "label-header white"})
+      ul 
+        li Lead Frontend Developer, LOVATA
+        li Full-stack Node.js Developer
+      p
+        img.logo(src="pictures/minskcss.png")
+        img.logo(src="pictures/minskjs.png")
+        img.logo(src="pictures/css-minsk-js.svg")
+      +cover('pictures/about-cover.jpg')
     +slide({header: "MV*", classes:'cover menu-slide'}) 
       ul
         li MVC
@@ -31,44 +40,36 @@ html(lang='ru')
         li MVVM
       +cover('pictures/blur-cover.jpg')
     +slide({header: "Flux", shout: true})
+      h2.shout.shrink.next.strike &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    +slide({header: "Redux", shout: true})
+      h2.shout.shrink.next.strike &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     +slide({classes:'cover'}) 
       h2.shout.smaller
-        a(href="http://bit.ly/wsd-mv" target="_blank") bit.ly/wsd-mv
+        a(href="http://bit.ly/CPH-JS-MV" target="_blank") bit.ly/CPH-JS-MV
       +cover('pictures/blur-cover.jpg')  
-    // Пример
-    +slide({header: "Пример", shout: true, classes: 'cover label-header'})
+    // Example
+    +slide({header: "Example", shout: true, classes: 'cover label-header'})
       +cover('pictures/blur-cover.jpg')
     +slide({header: "TodoList", classes: 'label-header'})
       br
       img(src="pictures/todo.png", width="500")
-    +slide({header: "Никакой архитектуры", classes: 'label-header'})
-      div.relative
+    +slide({header: "No patterns", classes: 'label-header'})
+      .relative
         p 1. 
           span.label HTML
           img.screen-example(src="pictures/example-1.jpg")
-    +slide({header: "Никакой архитектуры", classes: 'label-header'})
-      div.relative
-        p 1. 
-          span.label HTML
-      .relative
+      .relative.next
         p 2. 
           span.label JS
-          img.next.screen-example(src="pictures/example-2.jpg")
-    +slide({header: "Никакой архитектуры", classes: 'label-header'})
-      div.relative
-        p 1. 
-          span.label HTML
-      .relative
-        p 2. 
-          span.label JS
-      .relative
+          img.screen-example.__shadow(src="pictures/example-2.jpg")
+      .relative.next
         p 3. 
           span.label AJAX
-          img.next.screen-example(src="pictures/example-3.jpg") 
-    +slide({header: "Проблемы", classes: 'label-header'})
+          img.screen-example.__shadow(src="pictures/example-3.jpg")      
+    +slide({header: "What is wrong", classes: 'label-header'})
       ul.no-indent 
-        li.next Данные хранятся в DOM
-        li.next Вариативность синтаксиса
+        li.next Data in DOM
+        li.next No stricted rules for the structure
     +slide({classes:'cover menu-slide'}) 
       h2.selected-item MV*
       ul.transparent
@@ -78,13 +79,13 @@ html(lang='ru')
       +cover('pictures/blur-cover.jpg')
     +slide({})
       img(src="pictures/separation_of_concerns.png")
-    +slide({header: "Преимущества MV*", classes: 'label-header'})
+    +slide({header: "Benefits of MV*", classes: 'label-header'})
       ul.no-indent 
-        li Определенная структура
-        li.next Модульность
-        li.next Переносимость
-        li.next Масштабируемость
-        li.next Тестируемость
+        li Strict structure
+        li.next Component-based
+        li.next Re-use of elements and decisions
+        li.next Scalable
+        li.next Easier to test
     // MVC
     +slide({classes:'cover menu-slide'}) 
       h2.transparent MV*
@@ -119,7 +120,7 @@ html(lang='ru')
       +cover('pictures/schemas/mvc-server.jpg')
     
     // Реализация MVC
-    +slide({header: "Пример MVC", shout: true, classes: 'cover label-header'})
+    +slide({header: "Example MVC", shout: true, classes: 'cover label-header'})
       +cover('pictures/blur-cover.jpg')
       // all
     +slide({header: "MVC: HTML", classes: "smaller label-header"})
@@ -497,7 +498,7 @@ html(lang='ru')
           | ('UpdateList');
         code }
     // Живой пример
-    +slide({header: "MVC: Приложение", classes: "label-header"})
+    +slide({header: "MVC: Example App", classes: "label-header"})
       +frame("examples/mvc/index.html")
     // MVP
     +slide({classes:'cover menu-slide'}) 
@@ -528,7 +529,7 @@ html(lang='ru')
     +slide({header: "MVP", classes: "label-header"})
       +cover('pictures/schemas/mvp-server.jpg') 
     // Реализация MVP  
-    +slide({header: "Пример MVP", shout: true, classes: 'cover label-header'})
+    +slide({header: "Example MVP", shout: true, classes: 'cover label-header'})
       +cover('pictures/blur-cover.jpg')
       // all
     +slide({header: "MVP: HTML", classes: "smaller label-header"})
@@ -554,7 +555,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -562,7 +563,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -608,7 +609,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -616,7 +617,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -668,7 +669,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -676,7 +677,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -739,7 +740,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -747,7 +748,7 @@ html(lang='ru')
           | "&gt;&lt;/
           span.tag script
           | &gt;
-        code        &lt;
+        code       &lt;
           span.tag script 
           span.attr src
           | ="
@@ -782,7 +783,7 @@ html(lang='ru')
         code     };
         code }
     // Живой пример
-    +slide({header: "MVP: Приложение", classes: "label-header"})
+    +slide({header: "MVP: Example App", classes: "label-header"})
       +frame("examples/mvp/index.html")
     // MVVM
     +slide({classes:'cover menu-slide'}) 
@@ -795,22 +796,22 @@ html(lang='ru')
     
     +slide({header: "MVVM", classes: "label-header"})
       +cover('pictures/components/mvvm-viewmodel.jpg')
-    +slide({header: "Связывание данных", classes: "label-header"})
-      p Это такой механизм, при котором изменение значения модели с любой стороны (View или Model) моментально вступает в силу на другой.
+    +slide({header: "Data binding", classes: "label-header"})
+      p Each data change is reflected automatically by the elements that are bound to the data
     +slide({header: "MVVM", classes: "label-header"})
       +cover('pictures/schemas/mvvm.jpg')
     // Реализация MVVM
-    +slide({header: "Пример MVVM", shout: true, classes: 'cover label-header'})
+    +slide({header: "Example MVVM", shout: true, classes: 'cover label-header'})
       +cover('pictures/blur-cover.jpg')
     +slide({header: "Knockout.js", classes: 'label-header'})
-      p Open-source фреймворк, реализующий Model-View-ViewModel на Javascript и data binding.
+      p Open-source framework that implements Model-View-ViewModel and data binding in Javascript.
       img(src="pictures/knockoutjs.jpg" width=600)
     +slide({header: "MVVM: HTML", classes: "label-header"})
       pre.html
         code     &lt;
           span.tag body
           | &gt;
-        code.comment        &lt;!-- Разметка html --&gt;
+        code.comment        &lt;!-- HTML --&gt;
         code        &lt;
           span.tag script 
           span.attr src
@@ -865,7 +866,7 @@ html(lang='ru')
         code     &lt;
           span.tag body
           | &gt;
-        code.comment        &lt;!-- Разметка html --&gt;
+        code.comment        &lt;!-- HTML --&gt;
         code        &lt;
           span.tag script 
           span.attr src
@@ -898,8 +899,8 @@ html(lang='ru')
         code        
           span.important itemToAdd
           | : ko.observable(""),
-        code.fade-opacity         addItem: function() { ... },
-        code.fade-opacity         removeItem: function() { ... },
+        code.fade-opacity        addItem: function() { ... },
+        code.fade-opacity        removeItem: function() { ... },
         code     };
         code };
         code.fade-opacity ko.applyBindings(new ListViewModel([]));
@@ -909,10 +910,10 @@ html(lang='ru')
         code     return {
         code.fade-opacity        items: ko.observableArray(items),
         code.fade-opacity        itemToAdd: ko.observable(""),
-        code         
+        code        
           span.important addItem
           | : function() { ... },
-        code         
+        code        
           span.important removeItem
           | : function() { ... },
         code     };
@@ -930,52 +931,46 @@ html(lang='ru')
         code.fade-opacity };
         code ko.applyBindings(new ListViewModel([]));
     // Живой пример
-    +slide({header: "MVVM: Приложение", classes: "label-header"})
+    +slide({header: "MVVM: Example App", classes: "label-header"})
       +frame("examples/mvvm/index.html")
-    +slide({header: "Что выбрать", classes: "label-header"})
+    +slide({header: "What to choose?", classes: "label-header"})
       ul.no-indent 
-        li.next Есть/можно использовать связывание данных
+        li.next You can use data binding
           span.next : 
             span.label MVVM
-        li.next Нет/нельзя использовать связывание данных
+        li.next You can't use data binding
           span.next : 
             span.label MVP
-        li.next Нужна связь представления и данных
+        li.next You need a connection between views and models
           span.next : 
             span.label MVС
-    +slide({header: "Хочу больше", classes: "label-header"})
+    +slide({header: "Further reading", classes: "label-header"})
       ul
         li Wiki: 
-          a(href="https://ru.wikipedia.org/wiki/Архитектура_программного_обеспечения") архитектура ПО
+          a(href="https://en.wikipedia.org/wiki/Software_architecture") software architecture
           | , 
-          a(href="https://ru.wikipedia.org/wiki/Model-View-Controller") MVC
+          a(href="https://en.wikipedia.org/wiki/Model–view–controller") MVC
           | , 
-          a(href="https://ru.wikipedia.org/wiki/Model-View-Presenter") MVP
+          a(href="https://en.wikipedia.org/wiki/Model–view–presenter") MVP
           | , 
-          a(href="https://ru.wikipedia.org/wiki/Model-View-ViewModel") MVVM
+          a(href="https://en.wikipedia.org/wiki/Model–view–viewmodel") MVVM
           | , 
-          a(href="https://ru.wikipedia.org/wiki/Шаблон_проектирования") шаблоны проектирования
+          a(href="https://en.wikipedia.org/wiki/Software_design_pattern") software design pattern
         li
-          a(href="https://habrahabr.ru/post/215605/") [Хабр] Паттерны для новичков: MVC vs MVP vs MVVM
+          a(href="https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/") Addy Osmani: Understanding MVC And MVP
         li
-          a(href="https://habrahabr.ru/post/119369/") [Хабр] И опять про MVC 
-        li
-          a(href="https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/") Addy Osmani: Understanding MVC And MVP [en]
-        li
-          a(href="https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/index.html") Learning JavaScript Design Patterns by Addy Osmani (ebook) [en]
-        li
-          a(href="http://designformasters.info/posts/mvc-javascript/") MVC в JavaScript
+          a(href="https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/index.html") Learning JavaScript Design Patterns by Addy Osmani (ebook)
         li
           a(href="http://knockoutjs.com/") Knockout.
         li
           a(href="http://todomvc.com/") TodoMVC
-    +slide({header: "Вместо вывода", classes: "label-header"})
+    +slide({header: "In the end", classes: "label-header"})
       img(src='pictures/today.jpg', width="100%")
-    +slide({name: 'theend', header: "Вопросы?", shout: true, classes: 'cover label-header'})
+    +slide({name: 'theend', header: "Questions?", shout: true, classes: 'cover label-header'})
       p.end-link 
-        a.bigger(href="http://bit.ly/wsd-mv" target="_blank") bit.ly/wsd-mv
+        a.bigger(href="http://bit.ly/CPH-JS-MV" target="_blank") bit.ly/CPH-JS-MV
         br
-        | Александра Шинкевич (
+        | Sasha Shinkevich (
         a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
         | )
       +cover('pictures/blur-cover.jpg')
