@@ -7,20 +7,17 @@ Responsive web design, Progressive Web Applications, HTML5, CSS3, IDE, API, Reac
 By using frameworks or UI libraries it's easy to forget that JavaScript is a very powerful language to work with. So my goal is to show you that you don't need a framework to build scalable and maintainable applications by providing simple examples of MVC, MVP and MVVM architectures.
 
 ## Examples
-You can find example in the `examples` folder.
+You can find examples in the `examples` folder.
 
 
 ## Further reading
-*   Wiki: [архитектура ПО](https://ru.wikipedia.org/wiki/Архитектура_программного_обеспечения), [MVC](https://ru.wikipedia.org/wiki/Model-View-Controller), [MVP](https://ru.wikipedia.org/wiki/Model-View-Presenter), [MVVM](https://ru.wikipedia.org/wiki/Model-View-ViewModel), [шаблоны проектирования](https://ru.wikipedia.org/wiki/Шаблон_проектирования)
-*   [[Хабр] Паттерны для новичков: MVC vs MVP vs MVVM](https://habrahabr.ru/post/215605/)
-*   [[Хабр] И опять про MVC](https://habrahabr.ru/post/119369/)
-*   [Addy Osmani: Understanding MVC And MVP [en]](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/)
-*   [Learning JavaScript Design Patterns by Addy Osmani (ebook) [en]](https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/index.html)
-*   [MVC в JavaScript](http://designformasters.info/posts/mvc-javascript/)
+*   Wiki: [software architecture](https://en.wikipedia.org/wiki/Software_architecture), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [MVP](https://en.wikipedia.org/wiki/Model–view–presenter), [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern)
+*   [Addy Osmani: Understanding MVC And MVP](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/)
+*   [Learning JavaScript Design Patterns by Addy Osmani (ebook)](https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/index.html)
 *   [Knockout.](http://knockoutjs.com/)
 *   [TodoMVC](http://todomvc.com/)
 
-## Просмотр и запуск презентации
+## View and launch locally
 ### 1. View the presentation
 Open `index.html` in the browser and view slides
 
